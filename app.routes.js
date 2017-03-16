@@ -20,7 +20,7 @@ $stateProvider
 
 })
 .state('nuovo',{
-  url:'/nuovo/',
+  url:'/nuovo',
   templateUrl: 'appuntamenti/nuovo.template.html',
   controller: 'NuovoCtrl',
 

@@ -56,14 +56,26 @@ var getAppuntamento=function(id){
     return el.id == id;
   })
 }
-var getNuovo=function(){
-  return nuovo;
+var getNuovo=function(nuovo){
+var nuovo= angular.copy(nuovo);
+return appuntamenti.push(nuovo);
+
+};
+
+
+var aggiornaAppuntamento=function(app){
+var updateOggetto= angular.copy(app);
+var indice= appuntamenti.findIndex(function(el){
+  return el.id == app.id;
+})
+appuntamenti.splice(indice,1,updateOggetto);
 }
 
   return{
 getAppuntamenti:getAppuntamenti,
 deleteAppuntamento: deleteAppuntamento,
 getAppuntamento:getAppuntamento,
-getNuovo:getNuovo
+getNuovo:getNuovo,
+aggiornaAppuntamento:aggiornaAppuntamento
   }
 });

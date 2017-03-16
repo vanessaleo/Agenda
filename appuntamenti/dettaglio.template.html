@@ -19,12 +19,12 @@
                 Cosa: <input type='text' class='form-control' ng-model='appuntamento.descrizione'>
             </div>
             <div class='form-group'>
-                <label for='priorita' ng-model='priorita'>Priorità</label>
+                <label for='priorita' >Priorità</label>
 
-                <select>
-  <option>Alta</option>
-  <option>Media</option>
-  <option>Bassa</option>
+                <select ng-model='appuntamento.priorita'>
+  <option value='red'>Alta</option>
+  <option value='orange'>Media</option>
+  <option value='green'>Bassa</option>
                 </select>
             </div>
             <button type='submit' class='btn btn-success'>Salva</button>

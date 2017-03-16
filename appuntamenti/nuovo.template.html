@@ -1,30 +1,31 @@
-<div class='appuntamento' >
+<div class='container' >
     <div class='row'>
         <div class='col-md-10' ng-hide='loading'>
             <h1> Il Mio Appuntamento </h1>
             <div ng-include src="'navbar.html'"></div>
             <iframe src="https://calendar.google.com/calendar/embed?src=vanessaleo3952%40gmail.com" style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+<form ng-submit='nuovo()' novalidate>
             <div class='form-group'>
-                Appuntamento:<input type='text' class='form-control'  ng-model=''>
+                Appuntamento:<input type='text' class='form-control'  ng-model='appuntamento.titolo'>
             </div>
             <div class='form-group'>
 
-                Data: <input type='datetime-local' class='form-control' ng-model="">
+                Data: <input type='datetime-local' class='form-control' ng-model='appuntamento.data'>
             </div>
             <div class='form-group'>
-                Cosa: <input type='text' class='form-control' ng-model=''>
+                Cosa: <input type='text' class='form-control' ng-model='appuntamento.descrizione'>
             </div>
             <div class='form-group'>
-                <label for='priorita' ng-model='priorita'>Priorità</label>
-
-                <select>
-  <option>Alta</option>
-  <option>Media</option>
-  <option>Bassa</option>
+                <label for='priorita' >Priorità</label>
+                <select ng-model='appuntamento.priorita'>
+  <option value='red'>Alta</option>
+  <option value='orange'>Media</option>
+  <option value='green'>Bassa</option>
 </select>
             </div>
-            <button class='btn btn-success' ng-click='salva()'>Salva</button>
+            <button type='submit'class='btn btn-success' >Salva</button>
                     <button class='btn btn-success' ui-sref='/'>Chiudi</button>
+</form>
         </div>
     </div>
 <br><br><br><br>
