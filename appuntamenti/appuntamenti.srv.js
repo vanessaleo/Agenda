@@ -58,7 +58,13 @@ var getAppuntamento=function(id){
 }
 var getNuovo=function(nuovo){
 var nuovo= angular.copy(nuovo);
-return appuntamenti.push(nuovo);
+var arrayId=  [];
+appuntamenti.forEach(function(el){
+  arrayId.push(el.id);
+})
+var id= Math.max(...arrayId);
+nuovo.id = ++id;
+ appuntamenti.push(nuovo);
 
 };
 

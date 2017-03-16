@@ -3,7 +3,7 @@
 
     <div ng-include src="'navbar.html'"></div>
     <div class="row">
-        <div class="col-sm-6 col-md-4" ng-repeat='app in appuntamenti |filter:ricerca |filtroAgenda:colore'>
+        <div class="col-sm-6 col-md-4" ng-repeat='app in appuntamenti |filter:ricerca |filtroAgenda:colore |orderBy:"data"'>
             <div class="thumbnail" style='border:1px solid {{app.priorita}}' ng-class="{'alta':app.priorita =='red','media':app.priorita =='orange','bassa':app.priorita =='green'}">
                 <iframe src="https://calendar.google.com/calendar/embed?src=vanessaleo3952%40gmail.com" style="border: 0" width="330" height="200" frameborder="0" scrolling="no"></iframe>
                 <div class="caption">
