@@ -12,5 +12,11 @@ $stateProvider
       return AgendaSrv.getAppuntamenti();
     }
   }
+})
+.state('dettaglio',{
+  url:'/dettaglio/:id',
+  templateUrl: 'appuntamenti/dettaglio.template.html',
+  controller: 'DettaglioCtrl',
+
 });
 });

@@ -1,0 +1,15 @@
+<div class='appuntamento'>
+<div class='row'>
+  <div class='col-md-10'>
+<h1> Il Mio Appuntamento </h1>
+<div ng-include src="'navbar.html'"></div>
+    <iframe src="https://calendar.google.com/calendar/embed?src=vanessaleo3952%40gmail.com" style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+    <div class="caption">
+        <h2> Appuntamento: {{appuntamento.titolo}}</h2>
+        <h2>Data: {{appuntamento.data | date: 'dd/MM/yyyy HH:mm'}}</h2>
+<h2>Cosa: {{appuntamento.descrizione}}</h2>
+<h2>Dove: {{appuntamento.luogo}}</h2>
+</div>
+</div>
+</div>
+</div>

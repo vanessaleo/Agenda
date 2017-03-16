@@ -1,1 +1,19 @@
-<h1>prova</h1>
+<div class='container'>
+  <h1>La mia Agenda</h1>
+
+    <div ng-include src="'navbar.html'"></div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4" ng-repeat='app in appuntamenti |filter:ricerca |filtroAgenda:colore'>
+            <div class="thumbnail" style='border:1px solid {{app.priorita}}'>
+                <iframe src="https://calendar.google.com/calendar/embed?src=vanessaleo3952%40gmail.com" style="border: 0" width="330" height="200" frameborder="0" scrolling="no"></iframe>
+                <div class="caption">
+                    <h3 >{{app.titolo}}</h3>
+                    <p>{{app.data | date: 'dd/MM/yyyy HH:mm'}}</p>
+                    <p><a href="#" class="btn btn-primary" role="button" ng-click='visualizza()' ui-sref='dettaglio({id:app.id})'>Visualizza</a> <a href="#" class="btn btn-danger" role="button" ng-click='elimina($index)'>Elimina</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br>
