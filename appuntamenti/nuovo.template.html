@@ -1,22 +1,18 @@
-<div ng-show='loading'>
-    <img src="http://api.ning.com/files/wdDZeipuIRydeFO-o32jfjGVFK5H7DEvHdNew3CRBmmFjYGmg-B1KXAU-R3CYL3tDZJSc67U*jacIZY9Fc*dCLMOOySBoVMA/circleloadinganimation.gif" />
-</div>
-<div class='appuntamento'>
+<div class='appuntamento' >
     <div class='row'>
         <div class='col-md-10' ng-hide='loading'>
             <h1> Il Mio Appuntamento </h1>
             <div ng-include src="'navbar.html'"></div>
             <iframe src="https://calendar.google.com/calendar/embed?src=vanessaleo3952%40gmail.com" style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
-<form  ng-submit='modifica()' novalidate>
             <div class='form-group'>
-                Appuntamento:<input type='text' class='form-control' ng-model='appuntamento.titolo'>
+                Appuntamento:<input type='text' class='form-control'  ng-model=''>
             </div>
             <div class='form-group'>
 
-                Data: <input type='datetime-local' class='form-control' ng-model="appuntamento.data">
+                Data: <input type='datetime-local' class='form-control' ng-model="">
             </div>
             <div class='form-group'>
-                Cosa: <input type='text' class='form-control' ng-model='appuntamento.descrizione'>
+                Cosa: <input type='text' class='form-control' ng-model=''>
             </div>
             <div class='form-group'>
                 <label for='priorita' ng-model='priorita'>Priorità</label>
@@ -25,12 +21,11 @@
   <option>Alta</option>
   <option>Media</option>
   <option>Bassa</option>
-                </select>
+</select>
             </div>
-            <button type='submit' class='btn btn-success'>Salva</button>
-            <button class='btn btn-success' ui-sref='/'>Chiudi</button>
-          </form>
+            <button class='btn btn-success' ng-click='salva()'>Salva</button>
+                    <button class='btn btn-success' ui-sref='/'>Chiudi</button>
         </div>
     </div>
-    <br><br><br><br>
+<br><br><br><br>
 </div>

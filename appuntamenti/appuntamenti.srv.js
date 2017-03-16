@@ -19,28 +19,28 @@ var appuntamenti= [{
 {
   id:3,
   titolo: 'shopping',
-  data: '20/03/2017 18:30',
+  data: new Date(2018,11,25,10,30),
   descrizione: 'compere e shopping',
   luogo: 'Ancona city',
   priorita: 'red'
 },
 {id:4,
   titolo: 'appuntamento',
-  data: new Date(),
+  data: new Date(2017,03,29,18,30),
   descrizione: 'oggi ci sarà da divertirsi',
   luogo: 'Stella Maris',
   priorita: 'red'
 },
 {id:5,
   titolo: 'parrucchiere',
-  data: new Date(),
+  data: new Date(2017,03,29,18,30),
   descrizione: 'colore e taglio',
   luogo: 'Blue Style',
   priorita: 'green'
 },
 {id:6,
   titolo: 'shopping',
-  data: '20/03/2017 18:30',
+  data: new Date(2017,05,19,16,30),
   descrizione: 'compere e shopping',
   luogo: 'Ancona city',
   priorita: 'orange'
@@ -56,9 +56,14 @@ var getAppuntamento=function(id){
     return el.id == id;
   })
 }
+var getNuovo=function(){
+  return nuovo;
+}
+
   return{
 getAppuntamenti:getAppuntamenti,
 deleteAppuntamento: deleteAppuntamento,
-getAppuntamento:getAppuntamento
+getAppuntamento:getAppuntamento,
+getNuovo:getNuovo
   }
 });

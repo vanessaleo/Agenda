@@ -18,5 +18,11 @@ $stateProvider
   templateUrl: 'appuntamenti/dettaglio.template.html',
   controller: 'DettaglioCtrl',
 
+})
+.state('nuovo',{
+  url:'/nuovo/',
+  templateUrl: 'appuntamenti/nuovo.template.html',
+  controller: 'NuovoCtrl',
+
 });
 });

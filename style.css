@@ -1,1 +1,11 @@
-.form-control{border-radius: 5px;}
+.form-control{border-radius: 5px;
+}
+.alta{
+  background-color: #FF421E;
+}
+.media{
+  background-color: #FFBF18;
+}
+.bassa{
+  background-color: #82C168;
+}
